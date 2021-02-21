@@ -2,10 +2,10 @@ name: ci #名称
 on: push #表示 push 的时候运行此 action
 jobs:
 	build_job:
-		runs-on:ubuntu-latest #表示我用 Ubuntu 最新版本运行他
+		runs-on: ubuntu-latest #表示我用 Ubuntu 最新版本运行他
 		name: build #job的名称
 		steps: #工作分几步
-			- name:Checkout
+			- name: Checkout
 			  uses: actions/checkout@v2 #这里使用的是 github官方提供的 action,checkout 项目到虚拟机上
 
 			- name: Install Dependencies //#安装依赖了
